@@ -1,0 +1,56 @@
+<template>
+  <div class="header">
+    <div class="header-left">
+      <div class="iconfont back-icon">&#xe6ff;</div>
+    </div>
+    <div class="header-input">
+      <span class="iconfont search-icon">&#xe651;</span>Citt or Scenic Spot
+    </div>
+    <div class="header-right">
+      City
+      <span class="iconfont down-icon">&#xe6b9;</span>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "HomeHeader"
+};
+</script>
+
+<style lang="stylus" scoped>
+  @import '~styles/variable.styl'
+.header
+  display:flex
+  background: $bgColor
+  line-height:.86rem
+  color:#ffff
+
+  .header-left
+    width:.64rem
+    float:left
+    margin-left: .2rem
+    .back-icon
+      font-size: .4rem
+      text-align: center
+  .header-input
+    flex:1
+    height:.64rem
+    line-height 0.64rem
+    padding-left: .2rem
+    margin-top: .12rem
+    margin-left:.1rem
+    background: #ffff
+    border-radius: .1rem
+    color: #ccc
+    .search-icon
+      margin-right: 0.2rem
+  .header-right
+    width:1.5rem
+    text-align: center
+    .down-icon
+      font-size:.4rem
+      padding-top: .4rem
+      margin-left: -0.04rem
+</style>
