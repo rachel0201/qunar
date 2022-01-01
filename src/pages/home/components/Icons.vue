@@ -69,6 +69,16 @@ export default {
           id: 10,
           icon: "\ue611",
           desc: "Pay Later"
+        },
+        {
+          id: 11,
+          icon: "\ue611",
+          desc: "Pay Later"
+        },
+        {
+          id: 12,
+          icon: "\ue611",
+          desc: "Pay Later"
         }
       ]
     };
@@ -77,7 +87,7 @@ export default {
     pages() {
       const pages = [];
       this.iconList.forEach((item, index) => {
-        const page = Math.floor(index / 8);
+        const page = Math.floor(index / 10);
         if (!pages[page]) {
           pages[page] = [];
         }
@@ -90,19 +100,21 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+  @import '~styles/variable.styl'
+  @import '~styles/mixins.styl'
 .icons >>> .swiper-container
   height:0
-  padding-bottom: 50%
+  padding-bottom: 40%
 .icon
   position:relative
   float:left
-  width: 25%
-  padding-bottom: 25%
+  width: 20%
+  padding-bottom: 20%
   height:0
   margin-top: 0.22rem
   margin-bottom: -0.66rem
   .iconfont
-    font-size:1rem
+    font-size:0.8rem
     top:0
     left 0
     right: 0
@@ -110,4 +122,6 @@ export default {
     padding-left: 0.44rem
   .des
     text-align: center
+    color:$darkTextColor
+    ellipsis()
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption" :not-next-tick="notNextTick" ref="mySwiper">
+    <swiper :options="swiperOption" ref="mySwiper">
       <!-- slides -->
       <swiper-slide>
         <img class="swiper-img" alt="" src="../../../img/img1.jpg" />
@@ -15,7 +15,7 @@
         <img class="swiper-img" alt="" src="../../../img/img4.jpg" />
       </swiper-slide>
       <!-- Optional controls -->
-      <div class="swiper-pagination" slot="pagination"></div>
+      <div class="" slot="pagination"></div>
     </swiper>
   </div>
 </template>
@@ -36,7 +36,7 @@ export default {
 
 <style lang="stylus" scoped>
 .wrapper>>>.swiper-pagination-bullet-active
-  background:white !important
+  background:red !important
 .wrapper
   overflow: hidden
   width:100%
@@ -45,4 +45,6 @@ export default {
   background: #eee
   .swiper-img
     width:100%
+  .swiper-pagination
+    margin-bottom:1rem
 </style>
