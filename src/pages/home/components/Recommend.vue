@@ -2,7 +2,12 @@
   <div>
     <div class="title">Get Inspired</div>
     <ul>
-      <li class="item border-bottom" v-for="item of list" :key="item.id">
+      <router-link
+        :to="'/detail/' + item.id"
+        class="item border-bottom"
+        v-for="item of list"
+        :key="item.id"
+      >
         <img class="item-img" alt="" :src="item.img" />
         <div class="item-info">
           <p class="item-title">{{ item.title }}</p>
@@ -15,9 +20,9 @@
             <p class="review-num">{{ item.review }} Reviews</p>
           </div>
           <p class="item-desc">{{ item.desc }}</p>
-          <a class="read-more">Read More</a>
+          <p class="read-more">Read More</p>
         </div>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>
@@ -42,10 +47,12 @@ export default {
   text-indent: 0.2rem
   font-size:0.4rem
   padding:0.1rem
+
 .item
   overflow: hidden
   display:flex
   height:1.9rem
+  color:$darkTextColor
   .item-img
     width: 2.4rem
     height: 1.7rem
