@@ -8,7 +8,9 @@
     <div class="header-fixed" v-show="!showAbs" :style="opacityStyle">
       Tour detais
       <div class="header-left">
-        <i class="iconfont fix-back-icon">&#xe6ff;</i>
+        <router-link to="/">
+          <i class="iconfont fix-back-icon">&#xe6ff;</i>
+        </router-link>
       </div>
     </div>
   </div>
@@ -62,6 +64,7 @@ export default {
     color:#eee
     font-size:0.4rem
 .header-fixed
+  z-index:1
   position:fixed
   top:0
   left:0
