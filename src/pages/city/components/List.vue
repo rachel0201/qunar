@@ -46,6 +46,15 @@ export default {
     cities: Object,
     letter: String
   },
+  watch: {
+    letter() {
+      console.log("letter", this.letter);
+      if (this.letter) {
+        const element = this.$refs[this.letter][0];
+        this.scroll.scrollToElement(element);
+      }
+    }
+  },
   mounted() {
     this.scroll = new BScroll(this.$refs.wrapper, {
       observeDOM: true,
