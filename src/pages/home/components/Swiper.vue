@@ -1,20 +1,10 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption" ref="mySwiper">
+    <swiper :options="swiperOption" ref="mySwiper" v-if="showSwiper">
       <!-- slides -->
-      <swiper-slide>
-        <img class="swiper-img" alt="" src="../../../img/img1.jpg" />
+      <swiper-slide v-for="item of list" :key="item.id">
+        <img class="swiper-img" alt="" :src="item.imgUrl" />
       </swiper-slide>
-      <swiper-slide>
-        <img class="swiper-img" alt="" src="../../../img/img2.jpg" />
-      </swiper-slide>
-      <swiper-slide>
-        <img class="swiper-img" alt="" src="../../../img/img3.jpg" />
-      </swiper-slide>
-      <swiper-slide>
-        <img class="swiper-img" alt="" src="../../../img/img4.jpg" />
-      </swiper-slide>
-      <!-- Optional controls -->
       <div class="" slot="pagination"></div>
     </swiper>
   </div>
@@ -23,6 +13,9 @@
 <script>
 export default {
   name: "HomeSwiper",
+  props: {
+    list: Array
+  },
   data() {
     return {
       swiperOption: {
@@ -30,6 +23,11 @@ export default {
         loop: true
       }
     };
+  },
+  computed: {
+    showSwiper() {
+      return this.list.length;
+    }
   }
 };
 </script>
@@ -41,7 +39,7 @@ export default {
   overflow: hidden
   width:100%
   height:0
-  padding-bottom:41.32%
+  padding-bottom:31.25%
   background: #eee
   .swiper-img
     width:100%

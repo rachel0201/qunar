@@ -6,16 +6,21 @@
     <div class="header-input">
       <span class="iconfont search-icon">&#xe651;</span>Citt or Scenic Spot
     </div>
-    <div class="header-right">
-      City
-      <span class="iconfont down-icon">&#xe6b9;</span>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{ this.city }}
+        <span class="iconfont down-icon">&#xe6b9;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: "HomeHeader"
+  name: "HomeHeader",
+  props: {
+    city: String
+  }
 };
 </script>
 
@@ -24,8 +29,8 @@ export default {
 .header
   display:flex
   background: $bgColor
-  line-height:.86rem
-  color:#ffff
+  line-height:$headerHeight
+  color:$linkColor
 
   .header-left
     width:.64rem
@@ -49,6 +54,7 @@ export default {
   .header-right
     width:1.5rem
     text-align: center
+    color:$linkColor
     .down-icon
       font-size:.4rem
       padding-top: .4rem

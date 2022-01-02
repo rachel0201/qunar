@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" v-if="showIcon">
       <swiper-slide v-for="(page, index) of pages" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
           <i class="iconfont">{{ item.icon }}</i>
@@ -14,79 +14,21 @@
 <script>
 export default {
   name: "HomeIcons",
+  props: {
+    list: Array
+  },
   data() {
     return {
       swiperOption: {
-        loop: true
-      },
-      iconList: [
-        {
-          id: 1,
-          icon: "\ue8e9",
-          desc: "Hotel"
-        },
-        {
-          id: 2,
-          icon: "\uf841",
-          desc: "Flights"
-        },
-        {
-          id: 3,
-          icon: "\ue615",
-          desc: "Holidays"
-        },
-        {
-          id: 4,
-          icon: "\ue64d",
-          desc: "Landmark"
-        },
-        {
-          id: 5,
-          icon: "\ue61b",
-          desc: "Cars"
-        },
-        {
-          id: 6,
-          icon: "\ue604",
-          desc: "Day trip"
-        },
-        {
-          id: 7,
-          icon: "\ue623",
-          desc: "Experience"
-        },
-        {
-          id: 8,
-          icon: "\ue655",
-          desc: "Plans"
-        },
-        {
-          id: 9,
-          icon: "\ue740",
-          desc: "Credict"
-        },
-        {
-          id: 10,
-          icon: "\ue611",
-          desc: "Pay Later"
-        },
-        {
-          id: 11,
-          icon: "\ue611",
-          desc: "Pay Later"
-        },
-        {
-          id: 12,
-          icon: "\ue611",
-          desc: "Pay Later"
-        }
-      ]
+        loop: true,
+        autoplay: false
+      }
     };
   },
   computed: {
     pages() {
       const pages = [];
-      this.iconList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 10);
         if (!pages[page]) {
           pages[page] = [];
@@ -94,6 +36,9 @@ export default {
         pages[page].push(item);
       });
       return pages;
+    },
+    showIcon() {
+      return this.list.length;
     }
   }
 };

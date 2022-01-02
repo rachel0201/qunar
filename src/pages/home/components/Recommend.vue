@@ -2,12 +2,8 @@
   <div>
     <div class="title">Get Inspired</div>
     <ul>
-      <li
-        class="item border-bottom"
-        v-for="item of recommendList"
-        :key="item.id"
-      >
-        <img class="item-img" alt="" v-bind:src="item.img" />
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
+        <img class="item-img" alt="" :src="item.img" />
         <div class="item-info">
           <p class="item-title">{{ item.title }}</p>
           <div class="review">
@@ -30,38 +26,8 @@
 
 export default {
   name: "HomeRecommend",
-  data() {
-    return {
-      recommendList: [
-        {
-          id: 1,
-          img: require("../../../img/item3.jpg"),
-          title: "Bruny Island Day Tour",
-          desc:
-            "Explore Bruny Island on this full-day trip from Hobart. Travel by ferry to the island, look out for seals and penguins as you sail. On the island, admire natural sights like The Neck and Truganini Lookout, and take leisurely walks to look for wallabies and other local wildlife. Discover the island’s food scene with tastings of cheese, chocolate, cider, and oysters, plus a lunch of local produce. An exclusive group tour of the historic Cape Bruny Lighthouse completes your experience.",
-          score: 2.3,
-          review: "1,234"
-        },
-        {
-          id: 2,
-          img: require("../../../img/item4.jpg"),
-          title: "Bruny Island Day Tour",
-          desc:
-            "Explore Bruny Island on this full-day trip from Hobart. Travel by ferry to the island, look out for seals and penguins as you sail. On the island, admire natural sights like The Neck and Truganini Lookout, and take leisurely walks to look for wallabies and other local wildlife. Discover the island’s food scene with tastings of cheese, chocolate, cider, and oysters, plus a lunch of local produce. An exclusive group tour of the historic Cape Bruny Lighthouse completes your experience.",
-          score: 3.7,
-          review: "123"
-        },
-        {
-          id: 3,
-          img: require("../../../img/item3.jpg"),
-          title: "Bruny Island Day Tour",
-          desc:
-            "Explore Bruny Island on this full-day trip from Hobart. Travel by ferry to the island, look out for seals and penguins as you sail. On the island, admire natural sights like The Neck and Truganini Lookout, and take leisurely walks to look for wallabies and other local wildlife. Discover the island’s food scene with tastings of cheese, chocolate, cider, and oysters, plus a lunch of local produce. An exclusive group tour of the historic Cape Bruny Lighthouse completes your experience.",
-          score: 2.3,
-          review: "123"
-        }
-      ]
-    };
+  props: {
+    list: Array
   }
 };
 </script>
