@@ -4,7 +4,7 @@
       <div class="iconfont back-icon">&#xe6ff;</div>
     </div>
     <div class="header-input">
-      <span class="iconfont search-icon">&#xe651;</span>Citt or Scenic Spot
+      <span class="iconfont search-icon">&#xe651;</span>City or Scenic Spot
     </div>
     <router-link to="/city">
       <div class="header-right">
@@ -16,10 +16,11 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   name: "HomeHeader",
-  props: {
-    city: String
+  computed: {
+    ...mapState(["city"])
   }
 };
 </script>
@@ -52,7 +53,8 @@ export default {
     .search-icon
       margin-right: 0.2rem
   .header-right
-    width:1.5rem
+    min-width:1.04rem
+    padding:0 0.1rem
     text-align: center
     color:$linkColor
     .down-icon

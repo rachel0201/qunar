@@ -4,6 +4,7 @@ import Vue from "vue";
 import App from "./App";
 import router from "./router";
 import fastClick from "fastclick";
+import store from "./store";
 import "styles/reset.css";
 import "styles/border.css";
 import "styles/iconfont/iconfont.css";
@@ -18,6 +19,8 @@ Vue.use(VueAwesomeSwiper);
 new Vue({
   el: "#app",
   router,
+  // store: store, 前后一样可以只写一个
+  store,
   components: { App },
   template: "<App/>"
 });
