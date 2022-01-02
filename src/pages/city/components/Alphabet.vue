@@ -76,7 +76,6 @@ export default {
 <style lang="stylus" scoped>
 @import '~styles/variable.styl'
 .list
-  z-index:10
   display:flex
   flex-direction:column
   justify-content:center
