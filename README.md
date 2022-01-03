@@ -24,7 +24,8 @@ The purpose of this project is for study only, not for commercial use. The image
 The application is able to load memory from the catch, avoiding reloading data when you open the same page again. Asynchronous loading is used to improve the performance. Please refer to the commons.
 Screenshots of the mobile testing.
 The home page
-![WeChat Image_20220103114319](https://user-images.githubusercontent.com/66928603/147893593-ff27fd52-3167-4322-b1b2-f2a6478ef56a.jpg | width=100)
+<img alt="" src="https://user-images.githubusercontent.com/66928603/147893593-ff27fd52-3167-4322-b1b2-f2a6478ef56a.jpg" width="200" height="500" />
+![](https://user-images.githubusercontent.com/66928603/147893593-ff27fd52-3167-4322-b1b2-f2a6478ef56a.jpg | width=100)
 The city page
 ![WeChat Image_20220103114341](https://user-images.githubusercontent.com/66928603/147893602-8f17ac2d-8648-4d95-ac63-83bb2078cef4.jpg | width=100)
 The detail page
