@@ -25,14 +25,17 @@ The application is able to load memory from the catch, avoiding reloading data w
 Screenshots of the mobile testing.
 
 
-The home page
-<img alt="" src="https://user-images.githubusercontent.com/66928603/147893593-ff27fd52-3167-4322-b1b2-f2a6478ef56a.jpg" width="200" height="500" />
+<b>The home page</b>
+
+<img alt="" src="https://user-images.githubusercontent.com/66928603/147893593-ff27fd52-3167-4322-b1b2-f2a6478ef56a.jpg" width="200" height="450" />
 
 
-The city page
-<img alt="" src="https://user-images.githubusercontent.com/66928603/147893602-8f17ac2d-8648-4d95-ac63-83bb2078cef4.jpg" width="200" height="500" />
+<b>The city page</b>
+
+<img alt="" src="https://user-images.githubusercontent.com/66928603/147893602-8f17ac2d-8648-4d95-ac63-83bb2078cef4.jpg" width="200" height="450" />
 
 
-The detail page
-<img alt="" src="https://user-images.githubusercontent.com/66928603/147893624-94a6ec0d-d312-4c9b-923e-3cb706404e57.jpg" width="200" height="500" />
+<b>The detail page</b>
+
+<img alt="" src="https://user-images.githubusercontent.com/66928603/147893624-94a6ec0d-d312-4c9b-923e-3cb706404e57.jpg" width="200" height="450" />
 
