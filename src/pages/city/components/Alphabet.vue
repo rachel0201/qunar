@@ -88,4 +88,5 @@ export default {
     line-height:0.44rem
     text-align:center
     color:$bgColor
+    margin-right:0.2rem
 </style>
